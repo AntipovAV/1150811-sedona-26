@@ -5,8 +5,133 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на профессиональном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">HTML и CSS, уровень 1</a>».</p>
-
+    <header>
+      <nav>
+      <a>
+        <img src="https://via.placeholder.com/150x100" alt="Логотип City of Sedona">
+      </a>
+      <ul>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="inner.html">Гостиницы</a></li>
+      </ul>
+      </nav>
+    </header>
+    <main>
+      <img src="https://via.placeholder.com/150x100" alt="Фото каньона">
+      <img src="https://via.placeholder.com/150x100" alt="Основной логотип Sedona">
+      <h1 class="sedona">Седона</h1>
+      <p class="definition">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <p class="cooler">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон<p>
+      <section>
+        <h2 class="5-reasons">5 причин выбрать Седону</h2>
+          <ul>
+            <li>
+              <h3 class="reason-1">Настоящий городок</h3>
+              <span>-№1-</span>
+              <img src="https://via.placeholder.com/150x100" alt="Фото города">
+              <p class="def-1">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+            </li>
+            <li>
+              <h3 class="reason-2">Там есть мост дьявола</h3>
+              <span>-№2-</span>
+              <img src="https://via.placeholder.com/150x100" alt="Фото моста">
+              <p class="def-2">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+            </li>
+            <li>
+              <h3 class="reason-3">Небольшая площадь</h3>
+              <span>-№3-</span>
+              <p class="def-3">Все достопримечательности находятся очень близко</p>
+            </li>
+            <li>
+              <h3 class="reason-4">Красивая дорога</h3>
+              <span>-№4-</span>
+              <p class="def-4">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </li>
+            <li>
+              <h3 class="reason-5">Мало туристов</h3>
+              <span>-№5-</span>
+              <p class="def-5">Большинство едет в Гранд Каньон и толпится там</p>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <h2 class="offers">Предложения</h2>
+            <ul>
+              <li>
+                <img src="https://via.placeholder.com/150x100" alt="изображение дом">
+                <h3 class="housing">Жилье</h3>
+                <p class="offer-1">Рекомендуем пожить в настоящем мотеле, всё как в кино!<p>
+              </li>
+              <li>
+                <img src="https://via.placeholder.com/150x100" alt="изображение бургер">
+                <h3 class="food">Еда</h3>
+                <p class="offer-2">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              </li>
+              <li>
+                <img src="https://via.placeholder.com/150x100" alt="изображение подарок">
+                <h3 class="souvenirs">Сувениры</h3>
+                <p class="offer-3">Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+        </section>
+        <section>
+          <h2 class="interest">Заинтересовались?</h2>
+          <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <img src="https://via.placeholder.com/150x100" alt="Карта">
+          <h3 class="search">Поиск гостиницы в Седоне</h3>
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <table class="table-form">
+              <tr>
+                <th>
+                  <label for="arrival">Дата заезда:</label>
+                </th>
+                <td colspan="3">
+                  <input type="date" id="arrival">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="departure">Дата выезда:</label>
+                </th>
+                <td colspan="3">
+                  <input type="date" id="departure">
+                </td>
+              </tr>
+              <tr>
+                <th>
+                  <label for="adults">Взрослые:</label>
+                </th>
+                <td>
+                  <input type="number" id="adults">
+                </td>
+                <th>
+                  <label for="children">Дети:</label>
+                </th>
+                <td>
+                  <input type="number" id="children">
+                </td>
+              </tr>
+              <tr>
+                <th colspan="4">
+                  <input type="submit" value="Найти">
+                </th>
+              </tr>
+            </table>
+          </form>
+        </section>
+    </main>
+    <footer>
+      <a href="#">#VISITSEDONA</a>
+      <div class="logo-htmlacademy">
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Youtube</a></li>
+        </ul>
+      </div>
+      <img src="https://via.placeholder.com/150x100" alt="Логотип htmlacademy">
+    </footer>
   </body>
 </html>
