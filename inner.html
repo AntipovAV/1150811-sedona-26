@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+      <a>
+        <img src="https://via.placeholder.com/150x100" alt="Логотип City of Sedona">
+      </a>
+      <ul>
+        <li><a href="#">Информация</a></li>
+        <li><a href="#">Фото и видео</a></li>
+        <li><a href="#">Карта штата</a></li>
+        <li><a href="#">Гостиницы</a></li>
+      </ul>
+      </nav>
+    </header>
+    <main>
+      <img src="https://via.placeholder.com/150x100" alt="Фото каньона эффект боке">
+      <h1>Выбор отеля</h1>
+      <section class="preferences">
+        <form class="preferences-form" method="post" action="http://echo.htmlacademy.ru">
+          <h2 class="infrastructure">Инфраструктура</h2>
+          <ul class="infrastructure-list">
+            <li>
+              <label>
+                <input type="checkbox" name="pool" id="pool"> Бассейн
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="parking" id="parking"> Парковка
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="wi-fi" id="wi-fi"> WI-FI
+              </label>
+            </li>
+          </ul>
+          <h2 class="housing">Тип жилья</h2>
+          <ul class="housing-list">
+            <li>
+              <label>
+                <input type="checkbox" name="hotel" id="hotel"> Гостиница
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="motel" id="motel"> Мотель
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="checkbox" name="apartments" id="apartments"> Апартаменты
+              </label>
+            </li>
+          </ul>
+          <h2 class="price-value">Стоимость в сутки (Р):</h2>
+          <div class="from-to">
+            <p class="from">От 0<p>
+            <p class="to">До 3000<p>
+          </div>
+          <input type="range" min="0" max="3000">
+          <input type="submit" name="Show" value="Показать">
+        </form>
+      </section>
+      <section class="results">
+        <h2 class="results-title">Найдено:</h2>
+        <ul class="sorted-by">
+          <li>По цене</li>
+          <li>По типу</li>
+          <li>По рейтингу</li>
+        </ul>
+        <hr>
+        <div class="amara-resort">
+          <img src="https://via.placeholder.com/150x100" alt="Фото Amara resort & spa">
+          <h3 class="amara-resort-title">Amara resort & spa</h3>
+          <p class="type">Гостиница</p>
+          <p class="price">От 4000 р.</p>
+          <div class="more-details"><a href="#">Подробнее</a></div>
+          <button type="button" name="amara-resort">Забронировать</button>
+          <p class="rating">Рейтинг: 8,5</p>
+        </div>
+        <hr>
+        <div class="desert-quail">
+          <img src="https://via.placeholder.com/150x100" alt="Фото Desert quail inn">
+          <h3 class="desert-quail-title">Desert quail inn</h3>
+          <p class="type">Мотель</p>
+          <p class="price">От 3000 р.</p>
+          <div class="more-details"><a href="#">Подробнее</a></div>
+          <button type="button" name="desert-quail">Забронировать</button>
+          <p class="rating">Рейтинг: 8,9</p>
+        </div>
+        <hr>
+        <div class="poco-diablo">
+          <img src="https://via.placeholder.com/150x100" alt="Фото Villas at poco diablo">
+          <h3 class="poco-diablo-title">Villas at poco diablo</h3>
+          <p class="type">Апартаменты</p>
+          <p class="price">От 2000</p>
+          <div class="more-details"><a href="#">Подробнее</a></div>
+          <button type="button" name="amara-resort">Забронировать</button>
+          <p class="rating">Рейтинг: 9,2</p>
+        </div>
+        <hr>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="hashtag">
+        <a href="#">#VISITSEDONA</a>
+      </div>
+      <div class="social">
+        <ul>
+          <li><a href="#">Twitter</a></li>
+          <li><a href="#">Facebook</a></li>
+          <li><a href="#">Youtube</a></li>
+        </ul>
+      </div>
+      <div class="htmlacademy">
+      <a href="#"><img src="https://via.placeholder.com/150x100" alt="Логотип htmlacademy"></a>
+      </div>
+      </form>
+    </footer>
+  </body>
+</html>

@@ -5,8 +5,8 @@
     <title>HTML Academy: Седона</title>
   </head>
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav">
       <a>
         <img src="https://via.placeholder.com/150x100" alt="Логотип City of Sedona">
       </a>
@@ -19,119 +19,97 @@
       </nav>
     </header>
     <main>
-      <img src="https://via.placeholder.com/150x100" alt="Фото каньона">
+      <section class="sedona-logo">
       <img src="https://via.placeholder.com/150x100" alt="Основной логотип Sedona">
+      </section>
       <h1 class="sedona">Седона</h1>
-      <p class="definition">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
+      <h2 class="definition">Седона - небольшой городок в Аризоне, заслуживающий большего!</h2>
       <p class="cooler">Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон<p>
-      <section>
-        <h2 class="5-reasons">5 причин выбрать Седону</h2>
-          <ul>
+      <section class="reasons">
+        <h2 class="choose-sedona">5 причин выбрать Седону</h2>
+          <ul class="reasons-list">
             <li>
-              <h3 class="reason-1">Настоящий городок</h3>
-              <span>-№1-</span>
+              <h3 class="reason-title">Настоящий городок</h3>
+              <span>- №1 -</span>
               <img src="https://via.placeholder.com/150x100" alt="Фото города">
-              <p class="def-1">Седона - не аттракцион для туристов, там течет своя жизнь</p>
+              <p class="reason-text">Седона - не аттракцион для туристов, там течет своя жизнь</p>
             </li>
             <li>
-              <h3 class="reason-2">Там есть мост дьявола</h3>
-              <span>-№2-</span>
+              <h3 class="reason-title">Там есть мост дьявола</h3>
+              <span>- №2 -</span>
               <img src="https://via.placeholder.com/150x100" alt="Фото моста">
-              <p class="def-2">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+              <p class="reason-text">Да, по нему можно пройти! Если конечно вы осмелитесь</p>
             </li>
             <li>
-              <h3 class="reason-3">Небольшая площадь</h3>
-              <span>-№3-</span>
-              <p class="def-3">Все достопримечательности находятся очень близко</p>
+              <h3 class="reason-title">Небольшая площадь</h3>
+              <span>- №3 -</span>
+              <p class="reason-text">Все достопримечательности находятся очень близко</p>
             </li>
             <li>
-              <h3 class="reason-4">Красивая дорога</h3>
-              <span>-№4-</span>
-              <p class="def-4">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              <h3 class="reason-title">Красивая дорога</h3>
+              <span>- №4 -</span>
+              <p class="reason-text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li>
-              <h3 class="reason-5">Мало туристов</h3>
-              <span>-№5-</span>
-              <p class="def-5">Большинство едет в Гранд Каньон и толпится там</p>
+              <h3 class="reason-title">Мало туристов</h3>
+              <span>- №5 -</span>
+              <p class="reason-text">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ul>
         </section>
-        <section>
-          <h2 class="offers">Предложения</h2>
-            <ul>
+        <section class="offer">
+          <h2 class="three-offers">Предложения</h2>
+            <ul class="offer-list">
               <li>
-                <img src="https://via.placeholder.com/150x100" alt="изображение дом">
-                <h3 class="housing">Жилье</h3>
-                <p class="offer-1">Рекомендуем пожить в настоящем мотеле, всё как в кино!<p>
+                <h3 class="offer-title">Жилье</h3>
+                <p class="offer-text">Рекомендуем пожить в настоящем мотеле, всё как в кино!<p>
               </li>
               <li>
-                <img src="https://via.placeholder.com/150x100" alt="изображение бургер">
-                <h3 class="food">Еда</h3>
-                <p class="offer-2">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+                <h3 class="offer-title">Еда</h3>
+                <p class="offer-text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
               </li>
               <li>
-                <img src="https://via.placeholder.com/150x100" alt="изображение подарок">
-                <h3 class="souvenirs">Сувениры</h3>
-                <p class="offer-3">Не только китайского, но и местного производства!</p>
+                <h3 class="offer-title">Сувениры</h3>
+                <p class="offer-text">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
         </section>
-        <section>
+        <section class="choose-hotel">
           <h2 class="interest">Заинтересовались?</h2>
           <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <img src="https://via.placeholder.com/150x100" alt="Карта">
-          <h3 class="search">Поиск гостиницы в Седоне</h3>
+          <a href="#">Поиск гостиницы в Седоне</a>
           <form class="form" action="https://echo.htmlacademy.ru" method="post">
-            <table class="table-form">
-              <tr>
-                <th>
-                  <label for="arrival">Дата заезда:</label>
-                </th>
-                <td colspan="3">
-                  <input type="date" id="arrival">
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <label for="departure">Дата выезда:</label>
-                </th>
-                <td colspan="3">
-                  <input type="date" id="departure">
-                </td>
-              </tr>
-              <tr>
-                <th>
-                  <label for="adults">Взрослые:</label>
-                </th>
-                <td>
-                  <input type="number" id="adults">
-                </td>
-                <th>
-                  <label for="children">Дети:</label>
-                </th>
-                <td>
-                  <input type="number" id="children">
-                </td>
-              </tr>
-              <tr>
-                <th colspan="4">
-                  <input type="submit" value="Найти">
-                </th>
-              </tr>
-            </table>
+            <label for="arrival">Дата заезда:
+              <input type="date" id="arrival">
+            </label>
+            <label for="departure">Дата выезда:
+              <input type="date" id="departure">
+            </label>
+            <label for="adults">Взрослые:
+              <input type="number" id="adults">
+            </label>
+            <label for="children">Дети:
+              <input type="number" id="children">
+            </label>
+            <input type="submit" value="Найти">
           </form>
         </section>
     </main>
-    <footer>
-      <a href="#">#VISITSEDONA</a>
-      <div class="logo-htmlacademy">
+    <footer class="footer">
+      <div class="hashtag">
+        <a href="#">#VISITSEDONA</a>
+      </div>
+      <div class="social">
         <ul>
           <li><a href="#">Twitter</a></li>
           <li><a href="#">Facebook</a></li>
           <li><a href="#">Youtube</a></li>
         </ul>
       </div>
-      <img src="https://via.placeholder.com/150x100" alt="Логотип htmlacademy">
+      <div class="htmlacademy">
+      <a href="#"><img src="https://via.placeholder.com/150x100" alt="Логотип htmlacademy"></a>
+      </div>
     </footer>
   </body>
 </html>
