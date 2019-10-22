@@ -288,9 +288,6 @@ a {
   padding-top: 58px;
 }
 
-li:last-child svg {
-  padding-top: 56px;
-}
 
 .offer-title {
   display: inline-block;
@@ -302,10 +299,6 @@ li:last-child svg {
   line-height: 21px;
   font-weight: bold;
   }
-
-li:last-child .offer-title {
-  padding-top: 29px;
-}
 
 .offer-text {
   max-width: 286px;
@@ -522,7 +515,7 @@ li:last-child .offer-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 458px;
+  min-width: 458px;
   margin: 0;
 }
 
@@ -551,10 +544,38 @@ li:last-child .offer-title {
   padding-left: 12px;
 }
 
-.form svg {
-  display:block;
+.form input[name="arrival"] {
+  margin-left: 21px;
+}
+
+.form input[name="departure"] {
+  margin-left: 17px;
+}
+
+.arrival-calendar {
+  display: inline-block;
   position: absolute;
-  left: 483px;
+  top: 63px;
+  right: 64px;
+}
+
+.departure-calendar {
+  display: inline-block;
+  position: absolute;
+  top: 130px;
+  right: 64px;
+}
+
+.form svg {
+  fill: #a9a9a9;
+}
+
+.form svg:hover {
+  fill: #000000;
+}
+
+.form svg:active {
+  fill: #81b3d2;
 }
 
 .form input:hover {
@@ -566,15 +587,25 @@ li:last-child .offer-title {
   outline-color: #e5e5e5;
 }
 
-.form label[for="adults"],
+.number-inputs {
+  display: flex;
+  width: 458px;
+}
+
+.form label[for="adults"] {
+  display: flex;
+  width: 229px;
+  align-items: center;
+  margin-bottom: 54px;
+}
+
 .form label[for="children"] {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   width: 229px;
   margin-bottom: 54px;
-  align-items: center;
 }
-
 
 .form input[name="adults"],
 .form input[name="children"] {
@@ -585,16 +616,10 @@ li:last-child .offer-title {
   text-align: center;
 }
 
-.adults-minus {
-  padding: 0;
-  border: none;
-  font: inherit;
-  color: inherit;
-  background-color: #f2f2f2;
-  width: 38px;
-  height: 38px;
-}
-.adults-plus {
+.adults-minus,
+.adults-plus,
+.children-plus,
+.children-minus {
   padding: 0;
   border: none;
   font: inherit;
@@ -604,6 +629,13 @@ li:last-child .offer-title {
   height: 38px;
 }
 
+.adults-minus {
+  margin-left: 40px;
+}
+
+.children-minus {
+  margin-left: 27px;
+}
 .submit-button {
   width: 458px;
   height: 58px;
@@ -757,7 +789,7 @@ li:last-child .offer-title {
   align-self: flex-start;
   width: 318px;
   margin-top: 26px;
-  margin-left: 280px;
+  margin-left: 278px;
   padding-bottom: 30px;
 
   color: #ffffff;
@@ -858,7 +890,7 @@ li:last-child .offer-title {
 }
 
 .range-toggle:hover {
-  background: #1c4f80;
+  transform: scale(1.2);
 }
 
 .range-toggle-min {
@@ -957,8 +989,11 @@ li:last-child .offer-title {
   border-bottom: none;
 }
 
+.sorted-by .active-sorting {
+  color: #81b3d2;
+}
+
 .arrows {
-  list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -966,9 +1001,15 @@ li:last-child .offer-title {
   list-style: none;
   width:35px;
 
+  list-style: none;
+
   margin: 0;
   padding: 0;
   margin-left: 504px;
+}
+
+.arrow-active path {
+  fill: #81b3d2;
 }
 
 .up:hover path,
@@ -985,12 +1026,9 @@ li:last-child .offer-title {
 
 .results article {
   display: flex;
-  justify-content: flex-end;
-  align-items: flex-start;
   flex-wrap: wrap;
   min-width: 1200px;
   border-top: 1px solid #e5e5e5;
-  padding-bottom: 24px;
 }
 
 .results article:last-child {
@@ -998,14 +1036,28 @@ li:last-child .offer-title {
 }
 
 .hotel-image {
-  margin-top: 30px;
+  display: flex;
+  width: 237px;
+}
+
+.hotel-image img {
+  padding: 30px 0;
+  padding-left: 73px;
+}
+
+.hotel-wrapper {
+  width: 670px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .hotel-title {
-  margin-top: 25px;
-  margin-left: 30px;
-  align-self: flex-start;
-  width: 240px;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  margin: 0;
+  width: 660px;
+  min-height: 50px;
 }
 
 .hotel-title a {
@@ -1013,6 +1065,7 @@ li:last-child .offer-title {
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
+
 }
 
 .hotel-title a:hover {
@@ -1023,20 +1076,26 @@ li:last-child .offer-title {
   color: #b2b2b2;
 }
 
-.type, .price {
+.details-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 110px;
+  min-height: 100px;
+}
+
+.to-book-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 142px;
+  margin-left: 7px;
+}
+
+.type,
+.price {
   line-height: 21px;
   font-weight: normal;
-}
-
-.type {
-  margin-left: -240px;
-  margin-top: 58px;
-  width: 116px;
-}
-
-.price {
-  margin-top: 58px;
-  width: 80px;
+  padding-top: 8px;
+  padding-bottom: 16px;
 }
 
 .details {
@@ -1048,8 +1107,7 @@ li:last-child .offer-title {
   width: 110px;
   height: 27px;
   background-color: #81b3d2;
-  margin-top: 93px;
-  margin-left: -196px;
+  margin: 0;
 }
 
 .details:hover {
@@ -1071,9 +1129,7 @@ li:last-child .offer-title {
   background-color: #766357;
   width: 142px;
   height: 27px;
-  margin-top: 93px;
-  margin-left: 6px;
-  margin-right: 520px;
+  margin: 0;
 }
 
 .to-book:hover {
@@ -1085,35 +1141,31 @@ li:last-child .offer-title {
   background-color: #503e33;
 }
 
-.four-stars {
+.rating-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 222px;
+}
+
+.stars {
   background-image: url(../img/star.svg);
   background-repeat: space;
-  width: 84px;
   height: 17px;
-  margin-top: 29px;
-  margin-right: 73px;
-  margin-left: -83px;
+  margin-top: 30px;
+}
+
+.four-stars {
+  width: 88px;
 }
 
 .three-stars {
-  background-image: url(../img/star.svg);
-  background-repeat: space;
   width: 65px;
-  height: 17px;
-  margin-top: 29px;
-  margin-right: 73px;
-  margin-left: -63px;
-
 }
 
 .two-stars {
-  background-image: url(../img/star.svg);
-  background-repeat: space;
-  width: 42px;
-  height: 17px;
-  margin-top: 29px;
-  margin-right: 73px;
-  margin-left: -40px;
+  width: 41px;
 }
 
 .rating {
@@ -1125,7 +1177,8 @@ li:last-child .offer-title {
   height: 27px;
   text-align: center;
   background-color: #f2f2f2;
-  margin-top: 93px;
+  order: 2;
+  margin-bottom: 30px;
 }
 
 /* footer */
@@ -1135,7 +1188,7 @@ li:last-child .offer-title {
   justify-content: space-between;
   align-items: center;
   width: 1200px;
-  min-height: 120px;
+
   background-color: #ffffff;
 }
 
@@ -1157,6 +1210,9 @@ li:last-child .offer-title {
 
 .social {
   width: 400px;
+  margin: 0;
+  padding-top: 36px;
+  padding-bottom: 36px;
 }
 
 .social ul {
