@@ -636,6 +636,53 @@ a {
 .children-minus {
   margin-left: 27px;
 }
+
+.adults-minus::before,
+.adults-plus::before,
+.children-minus::before,
+.children-plus::before {
+  display: block;
+  content: "";
+  background: #a9a9a9;
+  width: 11px;
+  height: 3px;
+  margin: 0 auto;
+}
+
+.adults-plus::after,
+.children-plus::after {
+  display: block;
+  content: "";
+  background: #a9a9a9;
+  width: 11px;
+  height: 3px;
+  margin: 0 auto;
+  transform: rotate(90deg) translateX(-1.5px);
+}
+
+.adults-plus::before,
+.children-plus::before {
+  transform: translateY(1.5px);
+}
+
+.adults-minus:hover::before,
+.adults-plus:hover::before,
+.children-minus:hover::before,
+.children-plus:hover::before,
+.adults-plus:hover::after,
+.children-plus:hover::after {
+  background-color: #000000;
+}
+
+.adults-minus:active::before,
+.adults-plus:active::before,
+.children-minus:active::before,
+.children-plus:active::before,
+.adults-plus:active::after,
+.children-plus:active::after {
+background-color: #81b3d2;
+}
+
 .submit-button {
   width: 458px;
   height: 58px;
@@ -1013,14 +1060,11 @@ a {
 }
 
 .up:hover path,
-.up:focus path,
-.down:hover path,
-.down:focus path {
+.up:focus path {
   fill: #231f20;
 }
 
-.up:active path,
-.down:active path {
+.up:active path {
   fill: #81b3d2;
 }
 
@@ -1267,11 +1311,15 @@ a {
   padding-top: 2px;
 }
 
-.htmlacademy a:hover path,
-.htmlacademy a:focus path {
+.htmlacademy svg {
+  fill: #000000;
+}
+
+.htmlacademy svg:hover,
+.htmlacademy svg:focus {
   fill: #81b3d2;
 }
 
-.htmlacademy a:active path {
+.htmlacademy svg:active {
   fill: #bdbbbc;
 }
