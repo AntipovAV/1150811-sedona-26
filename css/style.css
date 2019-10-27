@@ -331,7 +331,8 @@ a {
   display: flex;
   align-items: center;
   width: 1200;
-
+  position: relative;
+  z-index: 2;
   list-style: none;
 
   background-color: #eeeeee;
@@ -428,8 +429,9 @@ a {
   text-align: center;
   flex-wrap: wrap;
   width: 1200px;
-
   background-color: #ffffff;
+  position: relative;
+  z-index: 2;
 }
 
 .interesting-title {
@@ -476,14 +478,66 @@ a {
   flex-wrap: wrap;
   align-items: flex-start;
   align-content: flex-start;
-  width: 568px;
   min-height: 395px;
+  background: #ffffff;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+}
+
+.modal-searching {
+  width: 568px;
+
   position: absolute;
   margin-top: -593px;
   left: 50%;
   margin-left: -284px;
+  z-index: 1;
+}
 
-  background: #ffffff;
+.modal-show {
+  display: block;
+  animation-name: appearance;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+}
+
+.modal-error {
+  animation: shake 0.6s;
+}
+
+@keyframes appearance {
+  0% {
+    transform: translateY(-395px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
 }
 
 .form input[type="text"] {
@@ -707,7 +761,6 @@ background-color: #81b3d2;
   color: #7aadcb;
   background-color: #5496bd;
 }
-
 .footer-index {
   opacity: 0.9;
   margin-top: -120px;
@@ -764,12 +817,12 @@ background-color: #81b3d2;
   padding: 0;
   margin-top: 71px;
   margin-left: -137px;
-
   list-style: none;
 }
 
-.infrastructure-list li {
-  padding-bottom: 23px;
+.infrastructure-list li,
+.housing-list li {
+  padding-bottom: 24px;
 
   line-height: 21px;
   font-weight: normal;
@@ -798,39 +851,40 @@ background-color: #81b3d2;
 
   list-style: none;
 }
-
-.housing-list li {
-  padding-bottom: 23px;
-
-  line-height: 21px;
-  font-weight: normal;
+.infrastructure-list label,
+.housing-list label {
+  padding-left: 40px;
+  vertical-align: middle;
 }
 
-.infrastructure-list label{
-  display: flex;
-  align-items: center;
-}
-
-.housing-list label{
-  display: flex;
-  align-items: center;
-}
-
-.icon-on {
-  width: 27px;
-  height: 23px;
-  padding-right: 13px;
-
-  background: url(../img/checkbox-on.svg) no-repeat;
-}
-
-.icon-off {
-  width: 27px;
-  height: 23px;
-  padding-right: 13px;
-
+.filter-input + label::before {
+  content: "";
+  display: block;
+  position: absolute;
   background: url(../img/checkbox-off.svg) no-repeat;
+  width: 23px;
+  height: 23px;
 }
+
+.filter-input:checked + label::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: url(../img/checkbox-on.svg);
+  width: 26px;
+  height: 23px;
+}
+
+.filter-input:disabled + label::before,
+.filter-input:checked:disabled + label::before {
+  opacity: 0.5;
+}
+
+/*  Фокус на чекбоксах
+.filter-input:focus + label::before {
+  border: 2px solid #81b3d2;
+}
+*/
 
 .filter-range {
   align-self: flex-start;
