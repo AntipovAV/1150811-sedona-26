@@ -166,6 +166,7 @@ a {
 
 .sedona-title {
   display: inline-block;
+  vertical-align: inherit;
   position: relative;
   width: 600px;
 
@@ -183,6 +184,7 @@ a {
 .sedona-text {
   display: inline-block;
   width: 1200px;
+  vertical-align: middle;
 
   text-align: center;
   font-weight: normal;
@@ -291,6 +293,7 @@ a {
 
 .offer-title {
   display: inline-block;
+  vertical-align: middle;
 
   margin: 0;
   padding-top: 27px;
@@ -457,6 +460,7 @@ a {
 
 .choose-hotel a{
   display: inline-block;
+  vertical-align: middle;
   text-align: center;
   width: 568px;
 
@@ -611,6 +615,7 @@ a {
   position: absolute;
   top: 63px;
   right: 64px;
+  vertical-align: middle;
 }
 
 .departure-calendar {
@@ -618,6 +623,7 @@ a {
   position: absolute;
   top: 130px;
   right: 64px;
+  vertical-align: middle;
 }
 
 .form svg {
@@ -644,30 +650,27 @@ a {
 .number-inputs {
   display: flex;
   width: 458px;
-}
-
-.form label[for="adults"] {
-  display: flex;
-  width: 229px;
   align-items: center;
-  margin-bottom: 54px;
 }
 
 .form label[for="children"] {
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  width: 229px;
-  margin-bottom: 54px;
+  margin-left: 53px;
 }
 
-.form input[name="adults"],
-.form input[name="children"] {
+.form input[type="number"] {
   box-sizing: border-box;
   width: 38px;
   height: 38px;
+
   border: none;
   text-align: center;
+
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
 }
 
 .adults-minus,
@@ -676,8 +679,6 @@ a {
 .children-minus {
   padding: 0;
   border: none;
-  font: inherit;
-  color: inherit;
   background-color: #f2f2f2;
   width: 38px;
   height: 38px;
@@ -688,7 +689,7 @@ a {
 }
 
 .children-minus {
-  margin-left: 27px;
+  margin-left: 28px;
 }
 
 .adults-minus::before,
@@ -700,7 +701,7 @@ a {
   background: #a9a9a9;
   width: 11px;
   height: 3px;
-  margin: 0 auto;
+  margin: 18px auto;
 }
 
 .adults-plus::after,
@@ -711,12 +712,7 @@ a {
   width: 11px;
   height: 3px;
   margin: 0 auto;
-  transform: rotate(90deg) translateX(-1.5px);
-}
-
-.adults-plus::before,
-.children-plus::before {
-  transform: translateY(1.5px);
+  transform: rotate(90deg) translateX(-21px);
 }
 
 .adults-minus:hover::before,
@@ -747,6 +743,7 @@ background-color: #81b3d2;
   color: #ffffff;
   vertical-align: middle;
   text-transform: uppercase;
+  margin-top: 54px;
 
   background-color: #81b3d2;
   border: none;
@@ -791,7 +788,7 @@ background-color: #81b3d2;
 
 .preferences-form {
   display: flex;
-  flex-wrap: wrap;
+
   width: 1054px;
   margin: 0 auto;
   margin-top: 57px;
@@ -829,6 +826,7 @@ background-color: #81b3d2;
 }
 
 .housing-title {
+  width: 92px;
   margin-left: 55px;
   margin-top: 26px;
   margin-bottom: 0;
@@ -859,20 +857,23 @@ background-color: #81b3d2;
 
 .filter-input + label::before {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
   background: url(../img/checkbox-off.svg) no-repeat;
   width: 23px;
   height: 23px;
+  vertical-align: middle;
+  transform: translateX(-40px);
 }
 
 .filter-input:checked + label::before {
   content: "";
-  display: block;
+  display: inline-block;
   position: absolute;
-  background: url(../img/checkbox-on.svg);
+  background: url(../img/checkbox-on.svg) no-repeat;
   width: 26px;
   height: 23px;
+  vertical-align: middle;
 }
 
 .filter-input:disabled + label::before,
@@ -880,18 +881,12 @@ background-color: #81b3d2;
   opacity: 0.5;
 }
 
-/*  Фокус на чекбоксах
-.filter-input:focus + label::before {
-  border: 2px solid #81b3d2;
-}
-*/
-
 .filter-range {
   align-self: flex-start;
   width: 318px;
   margin-top: 26px;
-  margin-left: 278px;
-  padding-bottom: 30px;
+  margin-left: 282px;
+  padding-bottom: 34px;
 
   color: #ffffff;
   text-transform: uppercase;
@@ -908,7 +903,7 @@ background-color: #81b3d2;
 .price-controls {
   position: relative;
 
-  height: 36px;
+  height: 32px;
   margin-bottom: 20px;
 
   font-size: 0;
@@ -936,7 +931,7 @@ background-color: #81b3d2;
   font-size: 14px;
   line-height: 38px;
   vertical-align: top;
-
+  transform: translate(-7px, -2px);
   cursor: pointer;
 }
 
@@ -946,10 +941,15 @@ background-color: #81b3d2;
   padding-left: 65px;
 }
 
+.price-controls .min-price {
+  transform: translate(0px, -2px);
+}
+
 .price-controls input {
   width: 50px;
   margin: 0;
-
+  height: 35px;
+  line-height: 1;
   color: inherit;
   font: inherit;
 
@@ -1005,7 +1005,8 @@ background-color: #81b3d2;
 .btn-transparent {
   display: block;
   margin: 0 auto;
-  padding: 6px 35px;
+  padding: 6px 33px;
+  transform: translate(-4px, 2px);
 
   font-size: 14px;
   line-height: 20px;
@@ -1065,7 +1066,7 @@ background-color: #81b3d2;
   margin-left: 40px;
   padding: 0;
   padding-top: 34px;
-  padding-bottom: 35px;
+  padding-bottom: 34px;
 
 }
 
@@ -1144,9 +1145,9 @@ background-color: #81b3d2;
 }
 
 .hotel-wrapper {
-  width: 670px;
   display: flex;
   flex-wrap: wrap;
+  width: 670px;
 }
 
 .hotel-title {
@@ -1159,11 +1160,11 @@ background-color: #81b3d2;
 }
 
 .hotel-title a {
-  color: #000000;
   font-weight: bold;
   font-size: 21px;
   line-height: 26px;
 
+  color: #000000;
 }
 
 .hotel-title a:hover {
@@ -1193,17 +1194,20 @@ background-color: #81b3d2;
   line-height: 21px;
   font-weight: normal;
   padding-top: 8px;
-  padding-bottom: 16px;
+  padding-bottom: 14px;
 }
 
 .details {
   display: inline-block;
-  color: #ffffff;
-  line-height: 27px;
-  font-weight: bold;
-  text-align: center;
   width: 110px;
   height: 27px;
+  line-height: 27px;
+  vertical-align: middle;
+
+  font-weight: bold;
+  text-align: center;
+  color: #ffffff;
+
   background-color: #81b3d2;
   margin: 0;
 }
@@ -1220,13 +1224,15 @@ background-color: #81b3d2;
 .to-book {
   display: inline-block;
   text-align: center;
+  width: 142px;
+  height: 27px;
+  vertical-align: middle;
+
   color: #ffffff;
-  line-height: 27px;
   font-weight: bold;
   line-height: 27px;
   background-color: #766357;
-  width: 142px;
-  height: 27px;
+
   margin: 0;
 }
 
@@ -1268,15 +1274,19 @@ background-color: #81b3d2;
 
 .rating {
   display: inline-block;
-  color: #666666;
-  line-height: 27px;
-  font-weight: normal;
   width: 110px;
   height: 27px;
   text-align: center;
+  vertical-align: middle;
+  margin-bottom: 30px;
+
+  color: #666666;
+  line-height: 27px;
+  font-weight: normal;
+
   background-color: #f2f2f2;
   order: 2;
-  margin-bottom: 30px;
+
 }
 
 /* footer */
