@@ -10,10 +10,6 @@ var children = modal.querySelector("[name=children]");
 var isStorageSupport = true;
 var storage = "";
 
-if (modal) {
-  modal.classList.add("modal-close");
-}
-
 link.addEventListener("click", function (evt) {
   evt.preventDefault();
 
