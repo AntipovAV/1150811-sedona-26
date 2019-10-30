@@ -488,14 +488,9 @@ a {
   background: #ffffff;
 }
 
-.modal {
-  display: none;
-  position: fixed;
-}
-
 .modal-searching {
   width: 568px;
-
+  display: block;
   position: absolute;
   margin-top: -593px;
   left: 50%;
@@ -508,6 +503,11 @@ a {
   animation-name: appearance;
   animation-duration: 0.4s;
   animation-timing-function: linear;
+}
+
+.modal-close {
+  display: none;
+  position: fixed;
 }
 
 .modal-error {
