@@ -126,6 +126,7 @@ a {
   min-height: 780px;
 
   background: url(../img/background-canyon.jpg);
+  background-color: #666c70;
 }
 
 .welcome-logo {
@@ -474,6 +475,7 @@ a {
 
 .map {
   display: flex;
+  background: url(../img/map.png) no-repeat;
 }
 
 .form {
@@ -783,7 +785,7 @@ background-color: #81b3d2;
   color: #ffffff;
 
   background: url(../img/filter-background.jpg);
-  background-color: #5f717d;
+  background-color: #666c70;
 }
 
 .preferences-form {
@@ -879,6 +881,14 @@ background-color: #81b3d2;
 .filter-input:disabled + label::before,
 .filter-input:checked:disabled + label::before {
   opacity: 0.5;
+}
+
+.filter-input:focus + label::before {
+  outline-width: 2px;
+  outline-style: solid;
+  outline-color: Highlight;
+  outline-color: -webkit-focus-ring-color;
+  outline-style: auto;
 }
 
 .filter-range {
